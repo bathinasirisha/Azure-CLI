@@ -8,7 +8,9 @@ az group list --query "[]".{resourceGroupName:name,location:location}"
 az group list -o jsonc     =====json formatt
 az group list -o table     ====table formatt
 az group list -o yaml     ======yaml formatt
-az  group create -l northeurope -g sirigroup
-az group create --name RESOURCE_GROUP_NAME --location LOCATION
-az group create --name sirigroup --location northeurope
-az vm create  -n myvm -g sirigroup --image Ubuntu2204 --admin-username amdemouser --generate-ssh-keys
+az  group create -l northeurope -g sirigroup    =============>resoucegroup
+az group create --name RESOURCE_GROUP_NAME --location LOCATION    ==========>
+az group create --name sirigroup --location northeurope   ======= Resorcegroup
+az vm create  -n myvm -g sirigroup --image Ubuntu2204 --admin-username amdemouser --generate-ssh-keys    ======>VM
+
+az network vnet create --name "app-network" --resource-group "sirigrp" --subnet-name "SubnetA" --address-prefixes 10.0.0.0/16  ======>N/w 
