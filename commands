@@ -14,3 +14,8 @@ az group create --name sirigroup --location northeurope   ======= Resorcegroup
 az vm create  -n myvm -g sirigroup --image Ubuntu2204 --admin-username amdemouser --generate-ssh-keys    ======>VM
 
 az network vnet create --name "app-network" --resource-group "sirigrp" --subnet-name "SubnetA" --address-prefixes 10.0.0.0/16  ======>N/w 
+
+az vm image list --output table
+az vm list-sizes --location "North Europe"
+
+az vm create -g "app-grp" -n "appvm" --image "MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest" --admin-username "appusr" --size "Standard_DS2_v2" --vnet-name "app-network" --subnet "SubnetA"
