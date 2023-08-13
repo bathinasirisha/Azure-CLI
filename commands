@@ -8,4 +8,5 @@ az group list --query "[]".{resourceGroupName:name,location:location}"
 az group list -o jsonc     =====json formatt
 az group list -o table     ====table formatt
 az group list -o yaml     ======yaml formatt
- vm create  -n myvm -g sirigroup --image Ubuntu2204 --admin-username amdemouser --generate-ssh-keys
+az  group create -l northeurope -g sirigroup
+az vm create  -n myvm -g sirigroup --image Ubuntu2204 --admin-username amdemouser --generate-ssh-keys
