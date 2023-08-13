@@ -1,0 +1,11 @@
+az login    ============>To login azure account
+az -h      =============>to help which are available 
+az group -h
+az group list   ======|To see the list of resource groups
+
+az group list --query "[].name"     =======To see the available resourcegruops in our azure account
+az group list --query "[]".{resourceGroupName:name,location:location}"     
+az group list -o jsonc     =====json formatt
+az group list -o table     ====table formatt
+az group list -o yaml     ======yaml formatt
+ vm create  -n myvm -g sirigroup --image Ubuntu2204 --admin-username amdemouser --generate-ssh-keys
