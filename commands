@@ -9,4 +9,6 @@ az group list -o jsonc     =====json formatt
 az group list -o table     ====table formatt
 az group list -o yaml     ======yaml formatt
 az  group create -l northeurope -g sirigroup
+az group create --name RESOURCE_GROUP_NAME --location LOCATION
+az group create --name sirigroup --location northeurope
 az vm create  -n myvm -g sirigroup --image Ubuntu2204 --admin-username amdemouser --generate-ssh-keys
